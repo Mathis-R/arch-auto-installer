@@ -3,7 +3,7 @@
 
 ## Make sure to read the script and configure it to fit your needs
 
-### ALso make sure to :
+### Also make sure to :
  - have an internet connection (run  $ `ip -a` and look for an ip address)
  - be booted in efi boot mode (run  $ `ls /sys/firmware/efi/efivars` if no errors your are in UEFI)
  - having your keyboard layout configure correctly ($ `loadkeys *your-layout*`)
