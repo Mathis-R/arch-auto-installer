@@ -3,7 +3,7 @@
 
 # Part 2 After chrooting into the new system
 # When the script finishes you have a completely working archlinux
-# You now need to set up users and download a DE / WM
+# You now need to download a DE / WM and the software you like
 
 printf '\033c'
 ls /usr/share/zoneinfo/
@@ -17,7 +17,7 @@ hwclock --systohc
 pacman -Syy --noconfirm sed vim
 echo "Press enter, then uncomment your locale"
 read waiting
-vim /etc/locale.conf
+vim /etc/locale.gen
 locale-gen
 printf '\033c'
 echo "Enter your locale: "
