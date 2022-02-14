@@ -18,6 +18,9 @@ $ `git clone https://github.com/Mathis-R/my-arch-installer` \
 Then \
 `./part1.sh` \
 Then follow the instructions \
+Congratulations ! You now have a working archlinux system \
+Now you need to install a DE / WM , and the software you want to use \
+*Have Fun !*
 
 ---
 
