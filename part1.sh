@@ -21,11 +21,11 @@ mkfs.ext4 $partition
 echo "Enter EFI partition: "
 read efipartition
 mkfs.fat -F 32 $efipartition
-read -p "Did you also create efi partition? [y/n] " answer
+read -p "Did you also create a swap partition? [y/n] " answer
 if [[ $answer = y ]] ; then
   echo "Enter Swap partition: "
-  read swap-partition
-  swapon $swap-partition
+  read swappartition
+  swapon $swappartition
 fi
 mount $partition /mnt
 mkdir /mnt/boot
@@ -35,8 +35,8 @@ read country
 reflector --country $country --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist 
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
-cp part2.sh /mnt/part2.sh 
-chmod +x /mnt/part2.sh
+cp /root/my-arch-installer/part2.sh /mnt/part2.sh 
+printf '\033c'
+echo "Enter \"chmod +x part2.sh\" , then run it with ./part2.sh"
 arch-chroot /mnt
-./part2.sh
 exit 
