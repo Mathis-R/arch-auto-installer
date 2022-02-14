@@ -10,16 +10,16 @@
  
 ---
 
-First, boot on your USB with the archlinux ISO
-Then run
-$ `pacman -Syy git`
-Then
-$ `git clone https://github.com/Mathis-R/my-arch-installer`
-Then
-`./part1.sh`
-Then follow the instructions
+First, boot on your USB with the archlinux ISO \
+Then run \
+$ `pacman -Syy git` \
+Then \
+$ `git clone https://github.com/Mathis-R/my-arch-installer` \
+Then \
+`./part1.sh` \
+Then follow the instructions \
 
 ---
 
-Part1 run the first part of the installation (before chrooting into the new system)
+Part1 run the first part of the installation (before chrooting into the new system) \
 It will by itself run Part2 after automatically chrooting
