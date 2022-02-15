@@ -1,4 +1,4 @@
-# my-arch-installer
+# arch-auto-installer
 (Inspired from Bugswriter/arch-linux-magic script)
 
 ## Make sure to read the script and configure it to fit your needs
