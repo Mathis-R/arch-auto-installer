@@ -1,4 +1,4 @@
-# == my arch installer == #
+# == arch auto installer == #
 # (Inspired from bugswriter/arch-linux-magic script)
 
 # Part 1 Before chrooting into the new system
