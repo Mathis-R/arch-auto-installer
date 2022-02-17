@@ -20,11 +20,15 @@ read partition
 mkfs.ext4 $partition
 echo "Enter EFI partition: "
 read efipartition
-mkfs.fat -F 32 $efipartition
+read -p "Did you created it? [y/n] " answer
+if [[ $answer = y ]] ; then
+  mkfs.fat -F 32 $efipartition
+fi
 read -p "Did you also create a swap partition? [y/n] " answer
 if [[ $answer = y ]] ; then
   echo "Enter Swap partition: "
   read swappartition
+  mkswap $swappartition
   swapon $swappartition
 fi
 mount $partition /mnt
