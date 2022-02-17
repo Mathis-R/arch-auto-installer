@@ -47,5 +47,7 @@ passwd $username
 echo "Press enter, then allow your user / group to use the sudo command"
 read waiting
 EDITOR=vim visudo
+rm /part2.sh
 echo "Done ! You can now reboot, and then install a DE, WM and the software you want"
 echo "Have fun"
+exit
