@@ -43,6 +43,7 @@ systemctl enable NetworkManager
 echo "Enter your username: "
 read username
 useradd -m -G wheel $username
+usermod -aG audio,video $username
 passwd $username
 echo "Press enter, then allow your user / group to use the sudo command"
 read waiting
