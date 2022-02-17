@@ -33,6 +33,7 @@ echo "127.0.0.1       localhost" >> /etc/hosts
 echo "::1             localhost" >> /etc/hosts
 echo "127.0.1.1       $hostname.localdomain $hostname" >> /etc/hosts
 mkinitcpio -P
+echo "Create a password for the root user"
 passwd
 pacman --noconfirm -S grub efibootmgr os-prober
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
@@ -44,6 +45,7 @@ echo "Enter your username: "
 read username
 useradd -m -G wheel $username
 usermod -aG audio,video $username
+echo "Create a password for your user"
 passwd $username
 echo "Press enter, then allow your user / group to use the sudo command"
 read waiting
