@@ -60,10 +60,8 @@ echo "2. No, I do it myself"
 echo "Number : "
 read autogui
 if [[ $autogui = y ]] ; then
-  /part3.sh
+  #
   echo "Done ! You can reboot, install the software you want and enjoy your new system"
-else
-  rm /part3.sh
 fi
 echo "Have fun"
 exit
