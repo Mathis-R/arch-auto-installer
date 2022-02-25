@@ -42,7 +42,8 @@ reflector --country $country --age 12 --protocol https --sort rate --save /etc/p
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 cp /root/my-arch-installer/part2.sh /mnt/part2.sh 
+chmod +x /mnt/part2.sh
 printf '\033c'
-echo "Enter \"chmod +x part2.sh\" , then run it with ./part2.sh"
-arch-chroot /mnt
+#echo "Enter \"chmod +x part2.sh\" , then run it with ./part2.sh"
+arch-chroot /mnt ./part2.sh
 exit 
