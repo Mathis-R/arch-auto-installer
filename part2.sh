@@ -54,5 +54,16 @@ read waiting
 EDITOR=vim visudo
 rm /part2.sh
 echo "Done ! You can now reboot, and then install a DE, WM and the software you want"
+echo "If you want, you can use my build of dwm to have a minimalist GUI"
+echo "1. Ok, do it for me"
+echo "2. No, I do it myself"
+echo "Number : "
+read autogui
+if [[ $autogui = y ]] ; then
+  /part3.sh
+  echo "Done ! You can reboot, install the software you want and enjoy your new system"
+else
+  rm /part3.sh
+fi
 echo "Have fun"
 exit
