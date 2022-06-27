@@ -14,7 +14,7 @@ First, boot on your USB with the archlinux ISO \
 Then run \
 $ `pacman -Syy git` \
 Then \
-$ `git clone https://github.com/Mathis-R/my-arch-installer` \
+$ `git clone https://github.com/Mathis-R/arch-auto-installer` \
 Then \
 `./part1.sh` \
 Then follow the instructions \
